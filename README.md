@@ -1,41 +1,57 @@
-# emails_automaticos
-Script Python para envio de e-mails automáticos.
+# Envio de E-mails Automáticos
 
-Este projeto permite o envio de e-mails através de uma interface gráfica, com a opção de armazenar destinatários em um banco de dados SQLite.
+Este projeto consiste em uma aplicação em Python para o envio automatizado de e-mails. A aplicação permite que você salve destinatários em um banco de dados e envie e-mails com ou sem anexos. 
 
 ## Funcionalidades
 
-- **Envio de E-mails**: Envie e-mails facilmente para destinatários.
-- **Armazenamento de Destinatários**: Salve os destinatários para uso futuro.
-- **Interface Gráfica**: Utilize uma interface intuitiva construída com Tkinter.
+- **Interface Gráfica**: A aplicação possui uma interface gráfica intuitiva desenvolvida com Tkinter, com um design escuro e botões iluminados.
+- **Banco de Dados**: Os destinatários são salvos em um banco de dados SQLite para fácil acesso e reutilização.
+- **Envio de E-mails**: Envio de e-mails com suporte para anexos.
+- **Seleção de Destinatários**: Possibilidade de selecionar destinatários previamente salvos no banco de dados.
 
-## Pré-requisitos
+## Requisitos
 
 - Python 3.x
-- Bibliotecas: `smtplib`, `tkinter`, `sqlite3`
+- Bibliotecas: `smtplib`, `sqlite3`, `email`, `tkinter`
 
-## Ambiente Virtual
+## Como Usar
 
-O projeto utiliza um ambiente virtual chamado `email_virtual`. Um ambiente virtual é uma ferramenta que ajuda a manter as dependências do seu projeto isoladas de outras instalações do Python no seu sistema. Isso é importante porque:
+1. **Instalação**:
+   - Clone este repositório para sua máquina local.
+   - Crie um ambiente virtual chamado `email_virtual`:
+     ```bash
+     python -m venv email_virtual
+     ```
+   - Ative o ambiente virtual:
+     - No Windows:
+       ```bash
+       email_virtual\Scripts\activate
+       ```
+     - No macOS/Linux:
+       ```bash
+       source email_virtual/bin/activate
+       ```
+   - Instale as dependências necessárias (se houver).
 
-- **Isolamento**: Permite que você tenha versões específicas de pacotes e bibliotecas sem interferir em outros projetos.
-- **Facilidade de Gestão**: Ajuda a evitar conflitos de dependências entre projetos diferentes.
+2. **Configuração**:
+   - No código, insira seu e-mail e senha de aplicativo nas variáveis `usuario_email` e `senha_email`, respectivamente.
+
+3. **Execução**:
+   - Execute o arquivo Python para iniciar a aplicação:
+     ```bash
+     python seu_arquivo.py
+     ```
+
+## Importância do Ambiente Virtual
+
+O uso de um ambiente virtual é importante para isolar as dependências do seu projeto. Isso evita conflitos entre bibliotecas que podem ser necessárias para diferentes projetos, permitindo que você mantenha um ambiente limpo e controlado.
 
 
-### Como criar e ativar o ambiente virtual
+## Contribuições
 
-1. **Criar o ambiente virtual**:
-   ```bash
-   python -m venv email_virtual
+Sinta-se à vontade para contribuir com melhorias ou novas funcionalidades. Faça um fork deste repositório, crie uma branch para suas alterações e envie um pull request.
 
-## Instalação
+## Licença
 
-```bash
-# Clone o repositório
-git clone https://github.com/seu_usuario/seu_repositorio.git
+Este projeto é de uso livre. Se você utilizar o código, por favor, mantenha os créditos.
 
-# Navegue até o diretório do projeto
-cd seu_repositorio
-
-# Instale as bibliotecas necessárias
-pip install -r requirements.txt
